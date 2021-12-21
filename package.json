@@ -1,27 +1,29 @@
 {
-  "name": "laura",
-  "version": "1.0.0",
-  "description": "",
-  "main": "",
-  "scripts": {
-    "dev": "vite --host"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/maltebaer/laura.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "homepage": "https://github.com/maltebaer/laura#readme",
-  "devDependencies": {
-    "autoprefixer": "^10.4.0",
-    "postcss": "^8.4.4",
-    "tailwindcss": "^3.0.1",
-    "vite": "^2.7.1"
-  },
-  "dependencies": {
-    "@tailwindcss/forms": "^0.4.0",
-    "alpinejs": "^3.7.0"
-  }
+    "name": "xmas-2021",
+    "version": "1.0.0",
+    "description": "",
+    "main": "",
+    "scripts": {
+        "dev": "vite --host",
+        "build": "vite build",
+        "preview": "vite preview"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/maltebaer/xmas-2021.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "homepage": "https://github.com/maltebaer/xmas-2021#readme",
+    "devDependencies": {
+        "autoprefixer": "^10.4.0",
+        "postcss": "^8.4.4",
+        "tailwindcss": "^3.0.1",
+        "vite": "^2.7.1"
+    },
+    "dependencies": {
+        "@tailwindcss/forms": "^0.4.0",
+        "alpinejs": "^3.7.0"
+    }
 }
