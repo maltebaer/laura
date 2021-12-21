@@ -33,29 +33,12 @@
         <section class="relative page-container">
             <div class="-z-10">
                 <img
-                    class="
-                        absolute
-                        w-96
-                        h-auto
-                        -top-12
-                        -left-32
-                        -rotate-6
-                        opacity-10
-                    "
+                    class="absolute h-auto  w-96 -top-12 -left-32 -rotate-6 opacity-10"
                     src="./images/schneeflocke.png"
                     alt="schneeflocke"
                 />
                 <img
-                    class="
-                        absolute
-                        w-24
-                        h-auto
-                        -top-2
-                        left-4
-                        -rotate-6
-                        animate-ping
-                        opacity-75
-                    "
+                    class="absolute w-24 h-auto opacity-75  -top-2 left-4 -rotate-6 animate-ping"
                     src="./images/schneeflocke.png"
                     alt="schneeflocke"
                 />
@@ -65,16 +48,7 @@
                     alt="schneeflocke"
                 />
                 <img
-                    class="
-                        absolute
-                        w-16
-                        h-auto
-                        top-8
-                        right-4
-                        rotate-6
-                        animate-ping
-                        opacity-75
-                    "
+                    class="absolute w-16 h-auto opacity-75  top-8 right-4 rotate-6 animate-ping"
                     src="./images/schneeflocke.png"
                     alt="schneeflocke"
                 />
@@ -85,15 +59,7 @@
                 />
 
                 <img
-                    class="
-                        absolute
-                        w-96
-                        h-auto
-                        -bottom-12
-                        -right-20
-                        rotate-6
-                        opacity-10
-                    "
+                    class="absolute h-auto  w-96 -bottom-12 -right-20 rotate-6 opacity-10"
                     src="./images/schneeflocke.png"
                     alt="schneeflocke"
                 />
@@ -241,16 +207,7 @@
                 </svg>
             </a>
             <img
-                class="
-                    -z-10
-                    absolute
-                    w-96
-                    h-auto
-                    -bottom-12
-                    -left-20
-                    -rotate-6
-                    opacity-10
-                "
+                class="absolute h-auto  -z-10 w-96 -bottom-12 -left-20 -rotate-6 opacity-10"
                 src="./images/schneeflocke.png"
                 alt="schneeflocke"
             />
@@ -258,7 +215,7 @@
 
         <div
             x-data="{
-              images: ['./images/01.jpeg', './images/02.jpeg', './images/03.jpeg', './images/04.JPG', './images/05.JPG', './images/06.JPG', './images/07.JPG', './images/08.JPG', './images/09.JPG'],
+              images: ['/images/01.jpeg', '/images/02.jpeg', '/images/03.jpeg', '/images/04.JPG', '/images/05.JPG', '/images/06.JPG', '/images/07.JPG', '/images/08.JPG', '/images/09.JPG'],
               show: false,
               open: false,
               openImg: '',
@@ -278,23 +235,14 @@
 
                 this.openImg = this.images[nextIndex]
             },
-              validatePassword(e) {if (e.target.value === '01062020') { this.show = true }},
+              validatePassword(e) {if (e.target.value === '01062020') { this.show = true } },
             }"
             x-cloak
         >
             <section class="relative page-container">
                 <div id="page-3" class="absolute top-0"></div>
                 <img
-                    class="
-                        -z-10
-                        absolute
-                        w-96
-                        h-auto
-                        top-0
-                        -right-20
-                        rotate-6
-                        opacity-10
-                    "
+                    class="absolute top-0 h-auto  -z-10 w-96 -right-20 rotate-6 opacity-10"
                     src="./images/schneeflocke.png"
                     alt="schneeflocke"
                 />
@@ -306,17 +254,7 @@
                     </p>
 
                     <input
-                        class="
-                            w-full
-                            mt-4
-                            border
-                            rounded-lg
-                            text-sky-800
-                            placeholder:text-sky-800
-                            border-sky-100
-                            bg-sky-100
-                            focus:ring focus:ring-emerald-8xl
-                        "
+                        class="w-full mt-4 border rounded-lg  text-sky-800 placeholder:text-sky-800 border-sky-100 bg-sky-100 focus:ring focus:ring-emerald-8xl"
                         type="number"
                         placeholder="TTMMJJJJ"
                         pattern="\d*"
@@ -331,19 +269,11 @@
                     <template x-for="src in images">
                         <img
                             @click="if (show) { open = true; openImg = src }"
-                            class="
-                                object-cover object-center
-                                w-28
-                                h-28
-                                rounded-lg
-                            "
+                            class="object-cover object-center rounded-lg  w-28 h-28"
                             :class="show && 'cursor-pointer'"
                             :src="src"
                             alt="bärenbilder"
                         />
-                        <!-- <div class="w-full h-full bg-sky-400 rounded-lg">
-                            foo
-                        </div> -->
                     </template>
                 </div>
             </section>
@@ -370,14 +300,7 @@
                     x-show="open"
                     x-transition
                     @click="open = false; openImg = ''"
-                    class="
-                        relative
-                        flex
-                        items-center
-                        justify-center
-                        w-full
-                        h-full
-                    "
+                    class="relative flex items-center justify-center w-full h-full "
                 >
                     <div
                         @click.stop
