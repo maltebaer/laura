@@ -5,10 +5,9 @@ module.exports = {
     theme: {
         extend: {
             fontFamily: {
-                sans: ["'Poppins'", ...defaultTheme.fontFamily.sans],
                 kicker: ["Fredericka the Great"],
             },
         },
     },
-    plugins: [],
+    plugins: [require("@tailwindcss/forms")],
 };

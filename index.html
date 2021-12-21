@@ -1,29 +1,466 @@
-<!doctype html>
-<html class="no-js" lang="de">
+<!DOCTYPE html>
+<html class="no-js scroll-smooth" lang="de">
+    <head>
+        <meta charset="utf-8" />
+        <title>Weihnachten 2021</title>
+        <meta name="description" content="" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-<head>
-  <meta charset="utf-8">
-  <title>Weihnachten 2021</title>
-  <meta name="description" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta property="og:title" content="" />
+        <meta property="og:type" content="" />
+        <meta property="og:url" content="" />
+        <meta property="og:image" content="" />
 
-  <meta property="og:title" content="">
-  <meta property="og:type" content="">
-  <meta property="og:url" content="">
-  <meta property="og:image" content="">
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="icon" href="/icon.svg" type="image/svg+xml" />
+        <link rel="apple-touch-icon" href="icon.png" />
 
-  <link rel="icon" href="/favicon.ico" sizes="any">
-  <link rel="icon" href="/icon.svg" type="image/svg+xml">
-  <link rel="apple-touch-icon" href="icon.png">
+        <link rel="stylesheet" href="/tailwind.css" />
 
-  <link rel="stylesheet" href="css/tailwind.css">
+        <link rel="manifest" href="site.webmanifest" />
 
-  <link rel="manifest" href="site.webmanifest">
-  <meta name="theme-color" content="#fafafa">
-</head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap"
+            rel="stylesheet"
+        />
 
-<body>
-  <h1 class="text-sky-500">Hello Laura</h1>
-</body>
+        <meta name="theme-color" content="#fafafa" />
+    </head>
 
+    <body class="p-2 font-sans text-gray-700 bg-sky-200">
+        <section class="relative page-container">
+            <div class="-z-10">
+                <img
+                    class="
+                        absolute
+                        w-96
+                        h-auto
+                        -top-12
+                        -left-32
+                        -rotate-6
+                        opacity-10
+                    "
+                    src="./images/schneeflocke.png"
+                    alt="schneeflocke"
+                />
+                <img
+                    class="
+                        absolute
+                        w-24
+                        h-auto
+                        -top-2
+                        left-4
+                        -rotate-6
+                        animate-ping
+                        opacity-75
+                    "
+                    src="./images/schneeflocke.png"
+                    alt="schneeflocke"
+                />
+                <img
+                    class="absolute w-24 h-auto -top-2 left-4 -rotate-6"
+                    src="./images/schneeflocke.png"
+                    alt="schneeflocke"
+                />
+                <img
+                    class="
+                        absolute
+                        w-16
+                        h-auto
+                        top-8
+                        right-4
+                        rotate-6
+                        animate-ping
+                        opacity-75
+                    "
+                    src="./images/schneeflocke.png"
+                    alt="schneeflocke"
+                />
+                <img
+                    class="absolute w-16 h-auto top-8 right-4 rotate-6"
+                    src="./images/schneeflocke.png"
+                    alt="schneeflocke"
+                />
+
+                <img
+                    class="
+                        absolute
+                        w-96
+                        h-auto
+                        -bottom-12
+                        -right-20
+                        rotate-6
+                        opacity-10
+                    "
+                    src="./images/schneeflocke.png"
+                    alt="schneeflocke"
+                />
+            </div>
+
+            <div class="flex justify-center">
+                <img
+                    class="self-center w-24 h-auto -rotate-90"
+                    src="./images/ast.png"
+                    alt="ast"
+                />
+                <img
+                    class="self-center w-24 h-auto"
+                    src="./images/hirsch.png"
+                    alt="hirsch"
+                />
+                <img
+                    class="self-center w-24 h-auto rotate-90"
+                    src="./images/ast.png"
+                    alt="ast"
+                />
+            </div>
+
+            <h1 class="text-4xl font-semibold text-center">
+                Frohe Weihnachten für die besten
+                <div class="h-20 mt-4">
+                    <span
+                        class="text-6xl font-kicker"
+                        x-data="{
+                          text: '',
+                          textArray : ['Familien', 'Omas', 'Brüder', 'Opas', 'Schwestern', 'Patenonkel', 'Mamas', 'Freunde', 'Papas'],
+                          textIndex: 0,
+                          charIndex: 0,
+                          pauseEnd: 1000,
+                          pauseStart: 20,
+                          typeSpeed: 75,
+                          direction: 'forward'
+                    }"
+                        x-init="(() => {
+                          let typingInterval = setInterval(startTyping, typeSpeed);
+                          function startTyping(){
+                              let current = textArray[ textIndex ];
+                              if (charIndex > current.length){
+                                  direction = 'backward';
+                                  clearInterval(typingInterval);
+                                  setTimeout(function(){
+                                      typingInterval = setInterval(startTyping, typeSpeed);
+                                  }, pauseEnd);
+                              }
+                              text = current.substring(0, charIndex);
+                              if (direction == 'forward'){
+                                  charIndex += 1;
+                              } else {
+                                  if(charIndex == 0){
+                                      direction = 'forward';
+                                      clearInterval(typingInterval);
+                                      setTimeout(function(){
+                                          textIndex += 1;
+                                          if(textIndex >= textArray.length){
+                                              textIndex = 0;
+                                          }
+                                          typingInterval = setInterval(startTyping, typeSpeed);
+                                      }, pauseStart);
+                                  }
+                                  charIndex -= 1;
+                              }
+                          }
+                    })()"
+                        x-text="text"
+                    ></span>
+                </div>
+            </h1>
+
+            <a class="animate-bounce" href="#page-2">
+                <span class="sr-only">Scroll bottom</span>
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="w-6 h-6"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    aria-hidden="true"
+                >
+                    <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M19 13l-7 7-7-7m14-8l-7 7-7-7"
+                    />
+                </svg>
+            </a>
+            <img
+                class="
+                    -z-10
+                    absolute
+                    w-32
+                    h-auto
+                    bottom-4
+                    left-8
+                    rotate-[22deg]
+                "
+                src="./images/suessigkeiten.png"
+                alt="schneeflocke"
+            />
+        </section>
+
+        <section class="relative page-container">
+            <div id="page-2" class="absolute top-0"></div>
+
+            <h1 class="text-4xl font-semibold text-center">wünschen</h1>
+
+            <div class="relative h-96">
+                <img
+                    class="absolute h-44 -rotate-12 -right-12 -top-12"
+                    src="./images/hugo.png"
+                    alt="hugo"
+                />
+                <img
+                    class="object-cover h-full rounded-lg"
+                    src="./images/cover.JPG"
+                    alt="familie bär"
+                />
+            </div>
+
+            <span class="text-2xl font-semibold text-center"
+                >Steffi, Malte, Hugo & Michel</span
+            >
+
+            <a class="animate-bounce" href="#page-3">
+                <span class="sr-only">Scroll bottom</span>
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="w-6 h-6"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    aria-hidden="true"
+                >
+                    <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M19 13l-7 7-7-7m14-8l-7 7-7-7"
+                    />
+                </svg>
+            </a>
+            <img
+                class="
+                    -z-10
+                    absolute
+                    w-96
+                    h-auto
+                    -bottom-12
+                    -left-20
+                    -rotate-6
+                    opacity-10
+                "
+                src="./images/schneeflocke.png"
+                alt="schneeflocke"
+            />
+        </section>
+
+        <div
+            x-data="{
+              images: ['./images/01.jpeg', './images/02.jpeg', './images/03.jpeg', './images/04.JPG', './images/05.JPG', './images/06.JPG', './images/07.JPG', './images/08.JPG', './images/09.JPG'],
+              show: false,
+              open: false,
+              openImg: '',
+              changeOpenImage(direction) {
+                if (!this.openImg) return
+
+                const currentIndex = this.images.indexOf(this.openImg)
+                let nextIndex = direction === 'forward' ? currentIndex + 1 : currentIndex - 1
+
+                const imgCount = this.images.length
+                if (nextIndex < 0) {
+                    nextIndex = imgCount - 1
+                }
+                if (nextIndex > imgCount - 1) {
+                    nextIndex = 0
+                }
+
+                this.openImg = this.images[nextIndex]
+            },
+              validatePassword(e) {if (e.target.value === '01062020') { this.show = true }},
+            }"
+            x-cloak
+        >
+            <section class="relative page-container">
+                <div id="page-3" class="absolute top-0"></div>
+                <img
+                    class="
+                        -z-10
+                        absolute
+                        w-96
+                        h-auto
+                        top-0
+                        -right-20
+                        rotate-6
+                        opacity-10
+                    "
+                    src="./images/schneeflocke.png"
+                    alt="schneeflocke"
+                />
+
+                <div class="mx-6">
+                    <p class="text-justify">
+                        Um noch mehr Bilder zu sehen, musst du ein kleines
+                        Rätsel lösen. Wann wurde Michel geboren?
+                    </p>
+
+                    <input
+                        class="
+                            w-full
+                            mt-4
+                            border
+                            rounded-lg
+                            text-sky-800
+                            placeholder:text-sky-800
+                            border-sky-100
+                            bg-sky-100
+                            focus:ring focus:ring-emerald-8xl
+                        "
+                        type="number"
+                        placeholder="TTMMJJJJ"
+                        pattern="\d*"
+                        @input="validatePassword($event)"
+                    />
+                </div>
+
+                <div
+                    class="flex flex-wrap justify-between space-y-2"
+                    :class="show ? '' : 'blur cursor-not-allowed transition pointer-events-none'"
+                >
+                    <template x-for="src in images">
+                        <img
+                            @click="if (show) { open = true; openImg = src }"
+                            class="
+                                object-cover object-center
+                                w-28
+                                h-28
+                                rounded-lg
+                            "
+                            :class="show && 'cursor-pointer'"
+                            :src="src"
+                            alt="bärenbilder"
+                        />
+                        <!-- <div class="w-full h-full bg-sky-400 rounded-lg">
+                            foo
+                        </div> -->
+                    </template>
+                </div>
+            </section>
+
+            <!-- Modal -->
+            <div
+                x-show="open"
+                @keydown.escape.window.prevent.stop="open = false; openImg = ''"
+                @keydown.left.window="changeOpenImage('backward')"
+                @keydown.right.window="changeOpenImage('forward')"
+                role="dialog"
+                aria-modal="true"
+                class="fixed inset-0"
+            >
+                <!-- Overlay -->
+                <div
+                    x-show="open"
+                    x-transition.opacity
+                    class="fixed inset-0 bg-black bg-opacity-80"
+                ></div>
+
+                <!-- Panel -->
+                <div
+                    x-show="open"
+                    x-transition
+                    @click="open = false; openImg = ''"
+                    class="
+                        relative
+                        flex
+                        items-center
+                        justify-center
+                        w-full
+                        h-full
+                    "
+                >
+                    <div
+                        @click.stop
+                        class="relative w-full max-w-2xl overflow-y-auto"
+                    >
+                        <img
+                            class="rounded-lg"
+                            :src="openImg"
+                            alt="bärenbilder"
+                        />
+
+                        <!-- left -->
+                        <button
+                            @click="changeOpenImage('backward')"
+                            class="absolute top-1/2 left-2 btn"
+                        >
+                            <span class="sr-only">Previous image</span>
+
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="w-6 h-6"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke="currentColor"
+                            >
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="M15 19l-7-7 7-7"
+                                />
+                            </svg>
+                        </button>
+
+                        <!-- right -->
+                        <button
+                            @click="changeOpenImage('forward')"
+                            class="absolute top-1/2 right-2 btn"
+                        >
+                            <span class="sr-only">Next image</span>
+
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="w-6 h-6"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke="currentColor"
+                            >
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="M9 5l7 7-7 7"
+                                />
+                            </svg>
+                        </button>
+
+                        <!-- close -->
+                        <button
+                            @click="open = false; openImg = ''"
+                            class="absolute top-2 right-2 btn"
+                        >
+                            <span class="sr-only">Close dialog</span>
+
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="w-6 h-6"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke="currentColor"
+                            >
+                                <path
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    stroke-width="2"
+                                    d="M6 18L18 6M6 6l12 12"
+                                />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script type="module" src="/main.js"></script>
+    </body>
 </html>
