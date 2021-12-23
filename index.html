@@ -264,6 +264,10 @@
                         Um noch mehr Bilder zu sehen, musst du ein kleines
                         Rätsel lösen. Wann wurde Michel geboren?
                     </p>
+                    <p class="text-justify">
+                        (P.S.: Du darfst natürlich Fragen, wenn du es gerade
+                        nicht parat hast.)
+                    </p>
 
                     <input
                         class="w-full mt-4 border rounded-lg  text-sky-800 placeholder:text-sky-800 border-sky-100 bg-sky-100 focus:ring focus:ring-emerald-8xl"
@@ -276,17 +280,28 @@
 
                 <div
                     class="flex flex-wrap justify-between max-w-sm space-y-2"
-                    :class="show ? '' : 'blur cursor-not-allowed transition pointer-events-none'"
+                    :class="show ? '' : 'pointer-events-none'"
                 >
                     <template x-for="src in images">
                         <img
                             @click="if (show) { open = true; openImg = src }"
                             class="object-cover object-center rounded-lg  w-28 h-28"
-                            :class="show && 'cursor-pointer'"
+                            :class="show ? 'cursor-pointer' : 'blur pointer-events-none'"
                             :src="src"
                             alt="bärenbilder"
                         />
                     </template>
+                </div>
+
+                <div class="text-xs text-center text-gray-600">
+                    Icons erstellt von
+                    <a href="https://www.freepik.com" title="Freepik"
+                        >Freepik</a
+                    >
+                    from
+                    <a href="https://www.flaticon.com/de/" title="Flaticon"
+                        >www.flaticon.com</a
+                    >
                 </div>
             </section>
 
