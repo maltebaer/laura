@@ -6,10 +6,20 @@
         <meta name="description" content="" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-        <meta property="og:title" content="" />
-        <meta property="og:type" content="" />
-        <meta property="og:url" content="" />
-        <meta property="og:image" content="" />
+        <meta property="og:title" content="Weihnachten 2021" />
+        <meta
+            property="og:description"
+            content="Liebe Grüße von Familie Bär."
+        />
+        <meta property="og:type" content="website" />
+        <meta
+            property="og:url"
+            content="https://xmas-2021.maltebaer.vercel.app/"
+        />
+        <meta
+            property="og:image"
+            content="https://xmas-2021.maltebaer.vercel.app/images/preview.png"
+        />
 
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <link rel="icon" href="/icon.svg" type="image/svg+xml" />
@@ -254,6 +264,10 @@
                         Um noch mehr Bilder zu sehen, musst du ein kleines
                         Rätsel lösen. Wann wurde Michel geboren?
                     </p>
+                    <p class="text-justify">
+                        (P.S.: Du darfst natürlich Fragen, wenn du es gerade
+                        nicht parat hast.)
+                    </p>
 
                     <input
                         class="w-full mt-4 border rounded-lg  text-sky-800 placeholder:text-sky-800 border-sky-100 bg-sky-100 focus:ring focus:ring-emerald-8xl"
@@ -266,17 +280,28 @@
 
                 <div
                     class="flex flex-wrap justify-between max-w-sm space-y-2"
-                    :class="show ? '' : 'blur cursor-not-allowed transition pointer-events-none'"
+                    :class="show ? '' : 'pointer-events-none'"
                 >
                     <template x-for="src in images">
                         <img
                             @click="if (show) { open = true; openImg = src }"
                             class="object-cover object-center rounded-lg  w-28 h-28"
-                            :class="show && 'cursor-pointer'"
+                            :class="show ? 'cursor-pointer' : 'blur pointer-events-none'"
                             :src="src"
                             alt="bärenbilder"
                         />
                     </template>
+                </div>
+
+                <div class="text-xs text-center text-gray-600">
+                    Icons erstellt von
+                    <a href="https://www.freepik.com" title="Freepik"
+                        >Freepik</a
+                    >
+                    from
+                    <a href="https://www.flaticon.com/de/" title="Flaticon"
+                        >www.flaticon.com</a
+                    >
                 </div>
             </section>
 
